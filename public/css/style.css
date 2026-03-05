@@ -1,0 +1,310 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #0e141b; /* Steam-like dark */
+            color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #171d25;
+            border-bottom: 1px solid #1f2a35;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #66c0f4;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #c7d5e0;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #66c0f4;
+        }
+
+        /* ===== SEARCH ===== */
+        .search-bar {
+            padding: 20px 60px;
+        }
+
+        .search-bar input {
+            width: 250px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            background: #1b2838;
+            color: white;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            margin: 20px 60px;
+            height: 320px;
+            background: linear-gradient(135deg, #1b2838, #0e141b);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            border: 1px solid #1f2a35;
+        }
+
+        .hero-slider {
+    position: relative;
+    max-width: 1100px;   /* control width here */
+    margin: 40px auto;   /* center it */
+    height: 360px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #1f2a35;
+}
+
+.hero-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.hero-slide {
+    min-width: 100%;
+    display: flex;
+    height: 100%;
+    background: linear-gradient(135deg, #1b2838, #0e141b);
+}
+
+.hero-left {
+    flex: 2;
+}
+
+.hero-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-price {
+    font-size: 20px;
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+.hero-arrow:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.hero-arrow.left {
+    left: 0;
+}
+
+.hero-arrow.right {
+    right: 0;
+}
+
+.buy-btn {
+    padding: 12px 20px;
+    background: #66c0f4;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buy-btn:hover {
+    background: #4fa3d1;
+}
+        /* ===== SECTION ===== */
+        .section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #66c0f4;
+        }
+
+        /* ===== GAME GRID ===== */
+        .game-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+        .game-card {
+    width: 220px;
+    background: #1b2838;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #1f2a35;
+}
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .game-thumb {
+            height: 120px;
+            background: #2a475e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c7d5e0;
+            font-size: 14px;
+        }
+
+        .game-info {
+            padding: 12px;
+        }
+
+        .game-info h4 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: #4caf50;
+            font-weight: 600;
+        }
+
+        /* Scrollbar (optional nice effect) */
+        .game-row::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .game-row::-webkit-scrollbar-thumb {
+            background: #2a475e;
+            border-radius: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar, .search-bar, .hero, .section {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        /* ===== CAROUSEL ===== */
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.5s ease;
+}
+
+.game-card {
+    min-width: calc((100% - 50px) / 3); /* 3 cards with gap */
+    background: #1b2838;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #1f2a35;
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-thumb img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 28px;
+    width: 45px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-container:hover .carousel-arrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+.carousel-arrow.left {
+    left: 10px;   /* inside container */
+}
+
+.carousel-arrow.right {
+    right: 10px;  /* inside container */
+}

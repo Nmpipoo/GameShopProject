@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Space Wars 2077",
+    "price": 39.99,
+    "image": "/images/space.jpg"
+  },
+  {
+    "name": "Cyber Adventure",
+    "price": 29.99,
+    "image": "/images/cyber.jpg"
+  },
+  {
+    "name": "Resident Nightmare",
+    "price": 49.99,
+    "image": "/images/resident.jpg"
+  },
+  {
+    "name": "Minecraft",
+    "price": 29.99,
+    "image": "/images/cyber.jpg"
+  },
+  {
+    "name": "Roblox",
+    "price": 29.99,
+    "image": "/images/cyber.jpg"
+  },
+  {
+    "name": "Overwatch",
+    "price": 29.99,
+    "image": "/images/cyber.jpg"
+  },
+  {
+    "name": "Devil Maycry",
+    "price": 29.99,
+    "image": "/images/cyber.jpg"
+  }
+]
